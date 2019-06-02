@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>99% | welcome </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/apple-touch-icon.png"/>
+    <style>
+        .container {
+            font-family: 'Roboto', sans-serif;
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-weight: 300;
+            font-size: 13px;
+        }
+        .body_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, 100%);
+        }
+        .body_img{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-100%);
+        }
+        .footer{
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body onload="createToasts_sysmsg()">
+    <div class="container">
+
+        <div class="body_text"> 
+            <a href="index.html"><img class="body_img" src="img/logo.png"></a>
+            <br>
+            <br>
+            e-mail: <a href="mailto: info@99percent.ltd">info@99percent.ltd</a>
+        </div> 
+
+        <footer class="footer">
+            <a class="copy_right_text">copyright © 2019 99 Percent Ltd. All rights reserved</a>
+        </footer>
+
+<!--         <script>
+            function createToasts_sysmsg() {
+                {% if messages %}
+                    {% for message in messages %}
+                        VanillaToasts.create({
+                            text: '{{ message }}',
+                            type: '{{ message.tags }}', // success, info, warning, error   / optional parameter
+                            timeout: 10000 // hide after 10000ms, // optional parameter
+                        });
+                    {% endfor %}
+                {% endif %}
+            }
+        </script>
+ -->
+        <!-- <div id="vanillatoasts-container"></div> -->
+
+        <!-- bootstrap script -->
+<!--         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script> -->
+    </div>
+</body>
+
+</html>
