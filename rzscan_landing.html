@@ -76,23 +76,29 @@ nav{max-width:var(--mw);margin:0 auto;display:flex;justify-content:space-between
 .sec-body p+p{margin-top:14px;}
 
 /* PROBLEM CARDS */
-.prob-card{padding:24px 0;border-bottom:0.5px solid var(--rule);display:grid;grid-template-columns:28px 1fr;gap:18px;}
+.prob-card{padding:24px 0;border-bottom:0.5px solid var(--rule);display:grid;grid-template-columns:28px 1fr;gap:18px;align-items:baseline;}
 .prob-card:last-child{border-bottom:none;}
+.prob-content{flex:1;}
 .prob-n{font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);line-height:1;}
+.prob-n{flex-shrink:0;margin-bottom:0;}
 .prob-title{font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin-bottom:5px;}
 .prob-body{font-size:11px;color:var(--ink-3);line-height:1.8;}
 
 /* SERVICES */
+.svc-content{flex:1;}
 .svc-header{max-width:var(--mw);margin:0 auto;padding:48px 40px 28px;border-bottom:0.5px solid var(--rule);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;}
 .svc-grid-wrap{border-bottom:0.5px solid var(--rule);}
 .svc-grid{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);}
 .svc{padding:36px 40px;border-right:0.5px solid var(--rule);}
 .svc:last-child{border-right:none;}
-.svc-icon{width:28px;height:28px;margin-bottom:16px;}
+.svc-layout{display:flex;align-items:flex-start;gap:16px;}
+.svc-icon{width:28px;height:28px;flex-shrink:0;margin-bottom:0;}
 .svc-name{font-family:var(--fd);font-size:21px;font-weight:300;line-height:1.2;margin-bottom:10px;}
 .svc-name em{font-style:italic;}
 .svc-desc{font-size:11px;color:var(--ink-3);line-height:1.85;}
 .svc-tag{display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);border-bottom:0.5px solid var(--accent);padding-bottom:2px;}
+
+
 
 /* ABSTRACT PANEL */
 .abs-wrap{border-bottom:0.5px solid var(--rule);}
@@ -102,11 +108,13 @@ nav{max-width:var(--mw);margin:0 auto;display:flex;justify-content:space-between
 .abs-r .sec-body{max-width:100%;}
 
 /* PROCESS */
+.proc-content{flex:1;}
 .proc-header{max-width:var(--mw);margin:0 auto;padding:48px 40px 28px;border-bottom:0.5px solid var(--rule);}
 .proc-grid{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.proc-layout{display:flex;align-items:flex-start;gap:16px;}
 .proc-step{padding:32px 40px;border-right:0.5px solid var(--rule);position:relative;}
 .proc-step:last-child{border-right:none;}
-.step-n{font-family:var(--fd);font-size:48px;font-weight:300;color:var(--paper-2);line-height:1;margin-bottom:10px;-webkit-text-stroke:0.5px var(--rule);}
+.step-n{font-family:var(--fd);font-size:48px;font-weight:300;color:var(--paper-2);line-height:1;margin-bottom:10px;-webkit-text-stroke:0.5px var(--rule);flex-shrink:0;}
 .step-title{font-family:var(--fm);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:7px;}
 .step-desc{font-family:var(--fm);font-size:11px;color:var(--ink-3);line-height:1.8;}
 .step-arr{position:absolute;right:-9px;top:40px;color:var(--accent);font-size:14px;z-index:2;}
@@ -469,25 +477,31 @@ footer{max-width:var(--mw);margin:0 auto;padding:28px 40px;display:flex;justify-
       </div>
       <div class="sec-r">
         <div class="prob-card">
-          <div class="prob-n">01</div>
-          <div>
-            <div class="prob-title">A resourcing problem  <button class="reveal-toggle" data-group="the-problem" data-target="prob-1" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-            <div class="prob-body reveal-body" id="prob-1" data-group="the-problem">Every hour a graduate or senior designer spends measuring a house is an hour not spent on design, documentation, or a billable client deliverable. A manual measure-up on a typical A&amp;A house ties up two people for half a day &mdash; before design has begun.</div>
-          </div>
+          
+            <div class="prob-n">01</div>
+            <div class="prob-content">
+              <div class="prob-title">A resourcing problem  <button class="reveal-toggle" data-group="the-problem" data-target="prob-1" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+              <div class="prob-body reveal-body" id="prob-1" data-group="the-problem">Every hour a graduate or senior designer spends measuring a house is an hour not spent on design, documentation, or a billable client deliverable. A manual measure-up on a typical A&amp;A house ties up two people for half a day &mdash; before design has begun.</div>
+            </div>
+          
         </div>
         <div class="prob-card">
-          <div class="prob-n">02</div>
-          <div>
-            <div class="prob-title">The reconciliation problem  <button class="reveal-toggle" data-group="the-problem" data-target="prob-2" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-            <div class="prob-body reveal-body" id="prob-2" data-group="the-problem">Manual dimensions never perfectly add up. Someone experienced makes an educated guess. If that guess is wrong, the error propagates silently through the design until a builder finds it on site &mdash; where it becomes expensive.</div>
-          </div>
+
+            <div class="prob-n">02</div>
+            <div class="prob-content">
+              <div class="prob-title">The reconciliation problem  <button class="reveal-toggle" data-group="the-problem" data-target="prob-2" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+              <div class="prob-body reveal-body" id="prob-2" data-group="the-problem">Manual dimensions never perfectly add up. Someone experienced makes an educated guess. If that guess is wrong, the error propagates silently through the design until a builder finds it on site &mdash; where it becomes expensive.</div>
+            </div>
+          
         </div>
         <div class="prob-card">
-          <div class="prob-n">03</div>
-          <div>
-            <div class="prob-title">The return visit  <button class="reveal-toggle" data-group="the-problem" data-target="prob-3" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-            <div class="prob-body reveal-body" id="prob-3" data-group="the-problem">A missed ceiling height. A forgotten junction detail. A stair geometry that wasn&rsquo;t quite right. Return visits are common, disruptive to the project programme, and require scheduling around the homeowner all over again.</div>
-          </div>
+
+            <div class="prob-n">03</div>
+            <div class="prob-content">
+              <div class="prob-title">The return visit  <button class="reveal-toggle" data-group="the-problem" data-target="prob-3" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+              <div class="prob-body reveal-body" id="prob-3" data-group="the-problem">A missed ceiling height. A forgotten junction detail. A stair geometry that wasn&rsquo;t quite right. Return visits are common, disruptive to the project programme, and require scheduling around the homeowner all over again.</div>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -504,39 +518,60 @@ footer{max-width:var(--mw);margin:0 auto;padding:28px 40px;display:flex;justify-
   </div>
   <div class="svc-grid">
     <div class="svc">
-      <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="8" width="24" height="18" stroke="#c8a96e" stroke-width="0.75"/>
-        <line x1="4" y1="16" x2="28" y2="16" stroke="#c8a96e" stroke-width="0.5"/>
-        <line x1="14" y1="8" x2="14" y2="26" stroke="#c8a96e" stroke-width="0.5"/>
-        <circle cx="4" cy="8" r="1.5" fill="#c8a96e"/><circle cx="28" cy="8" r="1.5" fill="#c8a96e"/>
-        <circle cx="4" cy="26" r="1.5" fill="#c8a96e"/><circle cx="28" cy="26" r="1.5" fill="#c8a96e"/>
-      </svg>
-      <div class="svc-name">Residential<br><em>A&amp;A Scan </em><button class="reveal-toggle" data-group="the-service" data-target="svc-1" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-      <div class="svc-desc reveal-body" id="svc-1" data-group="the-service">Full interior and exterior capture of single dwellings. Ideal for extension, renovation, and heritage adaptation projects. Single storey through to complex two-storey homes.<br><span class="svc-tag">.RCP + .E57</span></div>
-    </div>
-    <div class="svc">
-      <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="6" width="16" height="20" stroke="#c8a96e" stroke-width="0.75"/>
-        <rect x="20" y="12" width="8" height="14" stroke="#c8a96e" stroke-width="0.75"/>
-        <line x1="4" y1="14" x2="20" y2="14" stroke="#c8a96e" stroke-width="0.5"/>
-        <line x1="12" y1="6" x2="12" y2="26" stroke="#c8a96e" stroke-width="0.5"/>
-        <circle cx="4" cy="6" r="1.5" fill="#c8a96e"/><circle cx="20" cy="6" r="1.5" fill="#c8a96e"/>
-      </svg>
-      <div class="svc-name">Commercial<br><em>Fitout Scan </em><button class="reveal-toggle" data-group="the-service" data-target="svc-2" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-      <div class="svc-desc reveal-body" id="svc-2" data-group="the-service">Tenancy and floor-plate capture for commercial refurbishment and fitout projects. Delivered in formats compatible with Revit and AutoCAD workflows.<br><span class="svc-tag">.RCP + .E57</span></div>
+
+
+      <div class="svc-layout">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="24" height="18" stroke="#c8a96e" stroke-width="0.75"/>
+          <line x1="4" y1="16" x2="28" y2="16" stroke="#c8a96e" stroke-width="0.5"/>
+          <line x1="14" y1="8" x2="14" y2="26" stroke="#c8a96e" stroke-width="0.5"/>
+          <circle cx="4" cy="8" r="1.5" fill="#c8a96e"/><circle cx="28" cy="8" r="1.5" fill="#c8a96e"/>
+          <circle cx="4" cy="26" r="1.5" fill="#c8a96e"/><circle cx="28" cy="26" r="1.5" fill="#c8a96e"/>
+        </svg>
+        <div class="svc-content">
+          <div class="svc-name">Residential<br><em>A&amp;A Scan </em><button class="reveal-toggle" data-group="the-service" data-target="svc-1" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+          <div class="svc-desc reveal-body" id="svc-1" data-group="the-service">Full interior and exterior capture of single dwellings. Ideal for extension, renovation, and heritage adaptation projects. Single storey through to complex two-storey homes.<br><span class="svc-tag">.RCP + .E57</span>
+          </div>
+        </div>
+      </div>
+
 
     </div>
     <div class="svc">
-      <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 26 L16 6 L28 26 Z" stroke="#c8a96e" stroke-width="0.75" fill="none"/>
-        <line x1="4" y1="20" x2="28" y2="20" stroke="#c8a96e" stroke-width="0.5"/>
-        <line x1="10" y1="26" x2="16" y2="6" stroke="#c8a96e" stroke-width="0.5" stroke-dasharray="2,2"/>
-        <circle cx="16" cy="6" r="1.5" fill="#c8a96e"/>
-        <circle cx="4" cy="26" r="1.5" fill="#c8a96e"/><circle cx="28" cy="26" r="1.5" fill="#c8a96e"/>
-      </svg>
-      <div class="svc-name">Heritage<br><em>Documentation </em><button class="reveal-toggle" data-group="the-service" data-target="svc-3" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
-      <div class="svc-desc reveal-body" id="svc-3" data-group="the-service">Detailed facade and interior capture of heritage-listed and character buildings. Non-invasive, high-accuracy scanning of surfaces no tape measure can safely reach.<br><span class="svc-tag">.RCP + .E57 + HxDR</span></div>
-      
+      <div class="svc-layout">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="6" width="16" height="20" stroke="#c8a96e" stroke-width="0.75"/>
+          <rect x="20" y="12" width="8" height="14" stroke="#c8a96e" stroke-width="0.75"/>
+          <line x1="4" y1="14" x2="20" y2="14" stroke="#c8a96e" stroke-width="0.5"/>
+          <line x1="12" y1="6" x2="12" y2="26" stroke="#c8a96e" stroke-width="0.5"/>
+          <circle cx="4" cy="6" r="1.5" fill="#c8a96e"/><circle cx="20" cy="6" r="1.5" fill="#c8a96e"/>
+        </svg>
+        <div class="svc-content">
+          <div class="svc-name">Commercial<br><em>Fitout Scan </em><button class="reveal-toggle" data-group="the-service" data-target="svc-2" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+          <div class="svc-desc reveal-body" id="svc-2" data-group="the-service">Tenancy and floor-plate capture for commercial refurbishment and fitout projects. Delivered in formats compatible with Revit and AutoCAD workflows.<br><span class="svc-tag">.RCP + .E57</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="svc">
+      <div class="svc-layout">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 26 L16 6 L28 26 Z" stroke="#c8a96e" stroke-width="0.75" fill="none"/>
+          <line x1="4" y1="20" x2="28" y2="20" stroke="#c8a96e" stroke-width="0.5"/>
+          <line x1="10" y1="26" x2="16" y2="6" stroke="#c8a96e" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <circle cx="16" cy="6" r="1.5" fill="#c8a96e"/>
+          <circle cx="4" cy="26" r="1.5" fill="#c8a96e"/><circle cx="28" cy="26" r="1.5" fill="#c8a96e"/>
+        </svg>
+        <div class="svc-content">
+          <div class="svc-name">Heritage<br><em>Documentation </em><button class="reveal-toggle" data-group="the-service" data-target="svc-3" data-more="[+]" data-less="[&mdash;]">[+]</button></div>
+          <div class="svc-desc reveal-body" id="svc-3" data-group="the-service">Detailed facade and interior capture of heritage-listed and character buildings. Non-invasive, high-accuracy scanning of surfaces no tape measure can safely reach.<br><span class="svc-tag">.RCP + .E57 + HxDR</span>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
@@ -600,39 +635,67 @@ footer{max-width:var(--mw);margin:0 auto;padding:28px 40px;display:flex;justify-
     <span class="tag">How it works</span>
     <h2 class="sec-title" style="margin-bottom:0;">From enquiry to<br><em>delivery</em>, in four steps.</h2>
   </div>
+
+
   <div class="proc-grid">
+
     <div class="proc-step">
-      <div class="step-n">01</div>
-      <div class="step-title">Submit a brief  
-        <button class="reveal-toggle" data-group="the-works" data-target="step-1" data-more="[+]" data-less="[&mdash;]">[+]</button>
+      <div class="proc-layout">
+        <div class="step-n">01</div>
+        <div class="proc-content">
+          <div class="step-title">Submit a brief  
+            <button class="reveal-toggle" data-group="the-works" data-target="step-1" data-more="[+]" data-less="[&mdash;]">[+]</button>
+          </div>
+          <div class="step-desc svc-desc reveal-body" id="step-1" data-group="the-works">Send us the project address, building type, and approximate floor area. We&rsquo;ll confirm a fixed price within 24 hours.</div>
+        </div>
       </div>
-      <div class="step-desc svc-desc reveal-body" id="step-1" data-group="the-works">Send us the project address, building type, and approximate floor area. We&rsquo;ll confirm a fixed price within 24 hours.</div>
+
+
       <div class="step-arr">&rarr;</div>
     </div>
+
     <div class="proc-step">
-      <div class="step-n">02</div>
-      <div class="step-title">Confirm &amp; book 
-        <button class="reveal-toggle" data-group="the-works" data-target="step-2" data-more="[+]" data-less="[&mdash;]">[+]</button>
+      <div class="proc-layout">
+        <div class="step-n">02</div>
+        <div class="proc-content">
+          <div class="step-title">Confirm &amp; book 
+            <button class="reveal-toggle" data-group="the-works" data-target="step-2" data-more="[+]" data-less="[&mdash;]">[+]</button>
+          </div>
+          <div class="step-desc svc-desc reveal-body" id="step-2" data-group="the-works">Sign the service agreement, and we&rsquo;ll lock in a date with you and the homeowner or site contact.</div>
+          <div class="step-arr">&rarr;</div>
+        </div>
       </div>
-      <div class="step-desc svc-desc reveal-body" id="step-2" data-group="the-works">Sign the service agreement, and we&rsquo;ll lock in a date with you and the homeowner or site contact.</div>
+    </div>
+
+    <div class="proc-step">
+      <div class="proc-layout">
+        <div class="step-n">03</div>
+        <div class="proc-content">
+          <div class="step-title">We scan on site 
+            <button class="reveal-toggle" data-group="the-works" data-target="step-3" data-more="[+]" data-less="[&mdash;]">[+]</button>
+          </div>
+          <div class="step-desc svc-desc reveal-body" id="step-3" data-group="the-works">A single site visit. Every interior space and exterior facade captured with the Leica BLK360. No disruption, no damage, no return visits.</div>
+        </div>
+      </div>
       <div class="step-arr">&rarr;</div>
     </div>
+
     <div class="proc-step">
-      <div class="step-n">03</div>
-      <div class="step-title">We scan on site 
-        <button class="reveal-toggle" data-group="the-works" data-target="step-3" data-more="[+]" data-less="[&mdash;]">[+]</button>
+      <div class="proc-layout">
+        <div class="step-n">04</div>
+        <div class="proc-content">
+          <div class="step-title">Receive your files 
+            <button class="reveal-toggle" data-group="the-works" data-target="step-4" data-more="[+]" data-less="[&mdash;]">[+]</button>
+          </div>
+          <div class="step-desc svc-desc reveal-body" id="step-4" data-group="the-works">Your registered .RCP and .E57 point cloud files plus an HxDR viewer link, delivered as soon as they&rsquo;re ready. Load straight into Revit and begin.</div>
+        </div>
       </div>
-      <div class="step-desc svc-desc reveal-body" id="step-3" data-group="the-works">A single site visit. Every interior space and exterior facade captured with the Leica BLK360. No disruption, no damage, no return visits.</div>
-      <div class="step-arr">&rarr;</div>
-    </div>
-    <div class="proc-step">
-      <div class="step-n">04</div>
-      <div class="step-title">Receive your files 
-        <button class="reveal-toggle" data-group="the-works" data-target="step-4" data-more="[+]" data-less="[&mdash;]">[+]</button>
-      </div>
-      <div class="step-desc svc-desc reveal-body" id="step-4" data-group="the-works">Your registered .RCP and .E57 point cloud files plus an HxDR viewer link, delivered as soon as they&rsquo;re ready. Load straight into Revit and begin.</div>
+
     </div>
   </div>
+
+
+
 </div>
 
 <div class="about-wrap" id="about">
@@ -738,7 +801,7 @@ footer{max-width:var(--mw);margin:0 auto;padding:28px 40px;display:flex;justify-
   <div class="nav-logo">
    <span class="logo-rz">RZ</span><span class="logo-scan">scan</span>
  </div>
- <div class="foot-note">Canberra ACT &nbsp;&middot;&nbsp; hello@rzscan.com.au &nbsp;&middot;&nbsp; ABN [XX XXX XXX XXX]</div>
+ <div class="foot-note">Canberra ACT &nbsp;&middot;&nbsp; hello@rzscan.com.au &nbsp;&middot;&nbsp; ABN 34 348 216 175</div>
 </footer>
 </div>
 
